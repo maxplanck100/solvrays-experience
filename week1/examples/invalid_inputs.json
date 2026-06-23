@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "invalid_001",
+    "_description": "Missing @ symbol in email",
+    "_expected_failures": ["email"],
+    "email": "not-an-email.com",
+    "phone": "9841000111"
+  },
+  {
+    "_id": "invalid_002",
+    "_description": "Phone number too short (only 3 digits)",
+    "_expected_failures": ["phone"],
+    "email": "user@example.com",
+    "phone": "123"
+  },
+  {
+    "_id": "invalid_003",
+    "_description": "Both fields invalid",
+    "_expected_failures": ["email", "phone"],
+    "email": "@@broken",
+    "phone": "abc-xyz"
+  },
+  {
+    "_id": "invalid_004",
+    "_description": "Email missing TLD",
+    "_expected_failures": ["email"],
+    "email": "user@domain",
+    "phone": "+977-9801234567"
+  },
+  {
+    "_id": "invalid_005",
+    "_description": "Phone exceeds 15-digit ITU-T E.164 maximum",
+    "_expected_failures": ["phone"],
+    "email": "user@example.com",
+    "phone": "+9779999999999999"
+  },
+  {
+    "_id": "invalid_006",
+    "_description": "Empty strings for both fields",
+    "_expected_failures": ["email", "phone"],
+    "email": "",
+    "phone": ""
+  }
+]
