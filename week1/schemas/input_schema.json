@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "valid_001",
+    "_description": "Standard international format with country code",
+    "email": "bijay.algo@example.com",
+    "phone": "+977-9801234567"
+  },
+  {
+    "_id": "valid_002",
+    "_description": "Plus-addressing (tag) in local part",
+    "email": "user+tag@domain.io",
+    "phone": "+1 (415) 555-0172"
+  },
+  {
+    "_id": "valid_003",
+    "_description": "Subdomain in email, local 10-digit phone",
+    "email": "admin@mail.university.edu",
+    "phone": "9841000111"
+  },
+  {
+    "_id": "valid_004",
+    "_description": "Hyphenated domain, international phone with spaces",
+    "email": "hello@my-company.co.uk",
+    "phone": "+44 20 7946 0958"
+  },
+  {
+    "_id": "valid_005",
+    "_description": "Numeric local part, parenthesised area code",
+    "email": "123user@example.org",
+    "phone": "(01) 234-5678"
+  }
+]
