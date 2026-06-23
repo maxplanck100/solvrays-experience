@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/bijay-algo/solvrays-experience/week1/schemas/output_schema.json",
+  "title": "DataValidatorOutput",
+  "description": "Output contract for the Week 1 data_validator handle() function.",
+  "type": "object",
+  "properties": {
+    "is_valid": {
+      "type": "boolean",
+      "description": "True only when both email and phone pass their respective checks."
+    },
+    "email_valid": {
+      "type": "boolean",
+      "description": "Whether the supplied email address is well-formed."
+    },
+    "phone_valid": {
+      "type": "boolean",
+      "description": "Whether the supplied phone number is well-formed and within ITU-T E.164 digit bounds."
+    },
+    "errors": {
+      "type": "array",
+      "description": "Human-readable list of validation failures. Empty array when is_valid is true.",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["is_valid", "email_valid", "phone_valid", "errors"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "is_valid": true,
+      "email_valid": true,
+      "phone_valid": true,
+      "errors": []
+    },
+    {
+      "is_valid": false,
+      "email_valid": false,
+      "phone_valid": true,
+      "errors": ["Invalid email address: 'not-an-email.com'"]
+    }
+  ]
+}
