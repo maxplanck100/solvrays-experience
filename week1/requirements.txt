@@ -1,0 +1,14 @@
+# week1/requirements.txt
+# ──────────────────────────────────────────────────────────────────
+# Runtime dependencies
+# (data_validator.py uses only the Python standard library,
+#  so there are no hard runtime requirements beyond Python 3.8+)
+
+# ──────────────────────────────────────────────────────────────────
+# Development / testing dependencies
+pytest==8.3.5
+pytest-cov==6.1.0
+
+# ──────────────────────────────────────────────────────────────────
+# Optional: JSON Schema validation (for schema contract tests)
+jsonschema==4.23.0
